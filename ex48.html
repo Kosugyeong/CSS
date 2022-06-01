@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #news {
+            width: 648px;
+            border-left: 1px solid #CCC;
+            border-right: 1px solid #CCC;
+            margin: 0 auto;
+            font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",Dotum,"돋움",sans-serif;
+            padding: 50px 26px;
+        }
+
+        #news > div {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #DDD;
+        }
+
+        #news > div:last-child {
+            border-bottom: 0;
+        }
+
+        #news > h1 {
+            color: #3F63BF;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+
+        }
+
+        #news > div > img {
+            float: left;
+            margin-right: 16px;
+        }
+
+        #news > div > div {
+            float: left;
+
+            /* width를 안주면 글씨가 이미지 밑으로 내려감.. 너비를 지정해주면 이미지 옆으로 들어감 */
+            width: 440px;
+        }
+
+        #news > div::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #news > div > div > h2 {
+            font-size: 15px;
+            margin: 0;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        #news > div > div > div:nth-child(2) {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        #news > div > div > div:nth-child(3){
+            font-size: 12px;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex48.html -->
+
+    <!-- 네이버 뉴스 페이지 따라 만들기 ! 
+        1. 글 복사해오기
+        2. 다른 역할 하는 애들끼리 먼저 div로 묶기
+        3. 컨테이너로 크게 부모태그로 div로 묶기 그 후 아이디 적어주기
+        4. 제목 태그는 h1으로 바꾸기
+    
+    
+    -->
+
+    <div id ="news">
+        <h1>6월 23일 정식 출시 위메이드 미르M</h1>
+
+        <div>
+            <img src="images/naver01.jpg">
+            <div>
+                <h2>위메이드, 신작 '미르M' 6월 23일 정식 출시</h2>
+                <div>기사내용 요약 장현국 대표 "오랜 기간 공들여 준비한 대작 MMORPG" 밤 10시 카카오 쇼핑 라이브 통해 소통 및 게임 시연 [서울=뉴위메이드의 신작 …</div>
+                <div>뉴시스</div>
+            </div>
+        </div>
+
+        <div>
+            <img src="images/naver02.jpg">
+            <div>
+                <h2>위메이드, 미르M 쇼케이스…"6월 23일 정식 출시"</h2>
+                <div>위메이드가 올해 상반기 최대 신작인 '미르M: 뱅가드 앤 배가본드'를 다음달 23일에 정식 출시키로 했다. 위메이드는 31일 유튜브 라이브를 통해 미르M …</div>
+                <div>연합뉴스</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        /* 
+            위의 테이블의 td만 선택!!! 
+            1. 태그 선택자(X)
+                - td {}
+            2. 아이디 선택자(X)
+            3. 클래스 선택자(O)
+            4. 그룹 선택자(XXX)
+            5. 자식 선택자
+            6. 자손 선택자
+                
+        */
+
+        /* td { color: red; } */
+
+
+        /* *****테이블형식에서 선택자 쓸 때 tbody 쓰는거 잊지 않기!!!***** */
+        /* table > tbody > tr > td { color: blue; } */
+
+        /* 자손 선택자에서는 tbody를 굳이 안써도 된다.  */
+        /* table td { color: red; } */
+
+        
+        #tbl1 td { color: red; }    
+
+    </style>
+</head>
+<body>
+    <!-- ex07_selector.html -->
+
+    <!-- 테이블은 다음과 같이 원래 thead, tbody, tfoot으로 이루어져있다. 만약 이 중간 태그들을 안쓰면 그냥 다 tbody에 넣어버린다.  -->
+    <!-- 
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table> 
+    -->
+
+
+    <h1>테이블</h1>
+    <!-- 첫번째 테이블에 id를 붙여주기 -->
+    <table border width="500" id="tbl1">
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+    </table>
+
+    <h1>테이블</h1>
+
+    <table border width="500">
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+    </table>
+</body>
+</html>

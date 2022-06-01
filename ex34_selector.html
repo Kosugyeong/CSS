@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+            가상 클래스
+            1. :first-child > 해당 요소가 자신의 형제들 중 첫째인 경우
+            2. :last-child 
+            3. :nth-child()
+            4. :nth-last-child()
+
+
+            n
+            1. 숫자: index(위치)
+            2. 수열: 2n
+            3. 수열: even(짝수), odd(홀수)
+        
+        */
+
+        body{
+            margin-bottom: 100px; /*브라우저 제일 밑에 공백 넣어주는 방법*/
+        }
+
+        li:first-child{
+            color: coral;
+        }
+
+        li:nth-child(5){
+            color: darkseagreen;
+        }
+
+        li:nth-last-child(2){
+            color: sienna;
+        }
+
+        li:last-child{
+            color: cornflowerblue;
+        }
+        #tbl1{
+            border: 1px solid black;
+            border-collapse: collapse; /*선을 한 줄로*/
+            width: 600px;
+        }
+
+        #tbl1 th, #tbl1 td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        /* #tbl1 tr:first-child{
+            background-color: yellow;
+        } */
+
+        /* #tbl1 td:first-child{
+            background-color: gold;
+        } */
+
+        /* #tbl1 tbody tr{
+            background-color: gold;
+        } */
+
+
+        /* #tbl1 tbody tr:nth-child(5n-2){
+            background-color: gold;
+        } */
+        /* #tbl1 tbody tr:nth-child(odd){
+            background-color: gold;
+        } */
+        #tbl1 tbody tr:nth-child(even) td:nth-child(odd){ /* 짝 수 행에 홀수 열에 적용*/
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex34_selector.html -->
+
+    <h1>목록</h1>
+
+    <ul id="list1">
+        <li>사과</li>
+        <li>귤</li>
+        <li>바나나</li>
+        <li>포도</li>
+        <li>참외</li>
+        <li>복숭아</li>
+        <li>딸기</li>
+        <li>파인애플</li>
+        <li>망고</li>
+        <li>수박</li>
+
+    </ul>
+
+    <ul id="list2">
+        <li>사과</li>
+        <li>귤</li>
+        <li>바나나</li>
+        <li>포도</li>
+        <li>참외</li>
+        <li>복숭아</li>
+        <li>딸기</li>
+        <li>파인애플</li>
+        <li>망고</li>
+        <li>수박</li>
+
+    </ul>
+
+    <h1>테이블</h1>
+
+    <table id="tbl1">
+        <thead>
+            <tr>
+                <th>컬럼</th>
+                <th>컬럼</th>
+                <th>컬럼</th>
+                <th>컬럼</th>
+                <th>컬럼</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+            <tr>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+                <th>데이터</th>
+            </tr>
+        </tbody>
+
+
+
+    </table>
+
+</body>
+</html>

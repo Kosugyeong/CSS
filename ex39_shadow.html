@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        
+            그림자, shadow
+            1. text-shadow: x y blur color
+            2. box-shadow: x y blur color
+        
+        
+        */
+        .box{
+            margin: 20px;
+        }
+
+        #box1{
+            /* 3,3 위치에 1px흐리게 그림자 생성 */
+            text-shadow: 3px 3px 1px #999;
+        }
+
+        #box2{
+            box-shadow: 2px 2px 2px #999;
+            background-color: yellow;
+        }
+
+        #box3{
+            box-shadow: 0px 0px 5px #999;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex39_shadow.html -->
+
+
+    <!-- div#box$.box{상자$입니다.}*3 -->
+    <div id="box1" class="box">상자1입니다.</div>
+    <div id="box2" class="box">상자2입니다.</div>
+    <div id="box3" class="box">상자3입니다.</div>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* float를 이용해 한쪽에 켠켠이 쌓음. 먼저 실행된게 제일 왼쪽으로 가있는다.  */
+        span:nth-child(1) {
+            color:tomato;
+            float: left;
+        }
+        span:nth-child(2) {
+            color:gold;
+            float: left;
+        }
+        span:nth-child(3) {
+            color:cornflowerblue;
+            float: left;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            /* display: inline-block; */
+            float: left; /*요소들이 인라인의 성질을 가지게 된다. */
+        }
+
+        #box1{
+            background-color: red;
+        }
+        #box2{
+            background-color: orange;
+        }
+        #box3{
+            background-color: yellow;
+        }
+        #box4{
+            background-color: green;
+        }
+        #box5{
+            background-color: blue;
+        }
+        #box6{
+            background-color: indigo;
+        }
+        #box7{
+            background-color: purple;
+        }
+
+
+        /* font-size를 0으로 줌으로써 박스들 사이의 공백을 없애줌 */
+        /* #list{
+            font-size: 0;
+        } */
+
+        /* 공백을 없애고자 font-size를 0으로 주니 박스들이 안보임 그래서 다시 1rem으로 font-size를 줌 */
+        /* #list > .box {
+            font-size: 1rem;
+        } */
+
+        /*  <div style="clear:both;"></div>  이 코드와 같음.. 다음 글이 딸려 올라가지 않게 하기 위해서 아래 코드 쓴다.  */
+        #list::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+         
+        #list{
+            border:10px solid black;
+            /* 아래와 같이 너비를 줌으로써 창을 아무리 줄여도 박스들의 위치가 변하지 않고 한 줄에 출력하도록 해준다.  */
+            width: 700px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex38_float.html -->
+
+    <p>Lorem ipsum dolor, sit amet consectetur <span>adipisicing</span> elit. Minima ex officia necessitatibus, cum excepturi quisquam quasi aperiam <span>atque</span> in <span>ad</span> at sit quis, quod, dolores provident pariatur esse architecto quos?</p>
+
+    <hr>
+
+
+    <!-- ****동일한 역할을 하는 태그가 두 개 이상 나오면 무조건 부모 태그 만들기 ********* -->
+    <div id="list">
+        <!-- div#box$.box*7 -->
+        <div id="box1" class="box">빨</div>
+        <div id="box2" class="box">주</div>
+        <div id="box3" class="box">노</div>
+        <div id="box4" class="box">초</div>
+        <div id="box5" class="box">파</div>
+        <div id="box6" class="box">남</div>
+        <div id="box7" class="box">보</div>
+        <!-- 아래 코드를 씀으로써 h1 내용을 다음 라인에서 시작하게 바꿔줌. -->
+        <!-- <div style="clear:both;"></div> -->
+    </div>
+
+    <h1>다른 내용들..</h1>
+    
+</body>
+</html>

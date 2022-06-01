@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #menu{
+            background-color: orange;
+            width: 800px;
+            height: 100px;
+        }
+
+        #submenu {
+            background-color: yellow;
+            width: 200px;
+            height: 500px;
+            float: left;
+        }
+
+        #content {
+            background-color: cornflowerblue;
+            width: 600px;
+            height: 500px;
+            float: left; /*stack이나 큐처럼 노란색 부분을 먼저 왼쪽에 쌓고 그 이후에 파란색 부분을 float로 왼쪽에 배치하면 겹치지 않고 그 다음에 쌓이는 것이다. */
+        }
+
+        #footer {
+            /* 앞의 요소가 float되어서 지금 요소가 위로 말려 올라가는 현상 제거 */
+            clear: both;
+            background-color: green;
+            width: 800px;
+            height: 50px;
+        }
+
+        #main{
+            /* border: 10px solid gray; */
+            /* 넓이를 자식 태그들 중 제일 큰 값으로 지정해놓아야 함. 그래야 창이 작아졌을 때 자식 태그가 틀을 벗어나지 않음. */
+            width: 800px; 
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <!-- ex25_float.html -->
+    <h1>페이지 레이아웃</h1>
+    <!-- div id="main"과 같이 부모 태그를 만드는 습관 들이면 좋다! -->
+    <div id="main">
+        <div id="menu">주메뉴(orange)</div>
+        <div id="submenu">보조메뉴(yellow)</div>
+        <div id="content">콘텐츠(blue)</div>
+        <div id="footer">하단(green)</div>
+    </div>
+
+
+</body>
+</html>
