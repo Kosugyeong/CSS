@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+            flex
+            - flex box, flexiable box
+            - 레이아웃 작성 시 내부 요소의 배치를 지정하는 역할
+            - float + position + margin
+        
+        
+        */
+
+        #box {
+            border: 10px solid black;
+
+            /* 그냥 flex만 써줘도 float를 left로 한거처럼 만들어준다.!!!! 편하다! */
+            display: flex;
+
+            /* div 사이의 공백 없애줌 */
+            /* font-size: 0; */
+        }
+
+        /* 이 코드와 #box .item 안의 float: left와 같이 쓰면 정렬이 잘 되는 걸 볼 수 있다.   */
+        #box::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #box .item{
+            font-size: 2rem;
+
+            /* 너비 높이를 주기 위해서 inline-block. 너비 높이 안줘도 되면 그냥 inline으로 해도된다.  */
+            /* display: inline-block; */
+
+
+            /* float: left; */
+        }
+
+        #box .item:nth-child(1){background-color: tomato;}
+        #box .item:nth-child(2){background-color: orange;}
+        #box .item:nth-child(3){background-color: yellow;}
+        #box .item:nth-child(4){background-color: cornflowerblue;}
+        #box .item:nth-child(5){background-color: yellowgreen;}
+
+
+        #box {
+            width: 600px;
+            height: 600px;
+
+            display: flex;
+
+            /* 
+            
+                기본 상태(display: flex)
+                - 메인축 방향: 가로
+                - 수직축 방향: 세로
+                - 아이템 크기: 너비(요소크기만큼)
+                - 아이템 크기: 높이(부모크기만큼)
+            
+            */
+
+
+
+
+            /* flex 추가 속성 */
+
+            /* 
+
+                Axis
+                - 기본축, Main Axis
+                - 수직축(교차축), Cross Axis
+
+                
+
+                flex-direction
+                - 아이템의 배치 방향
+            
+            */
+            /* flex-direction: row; */  /*메인축*/
+            /*flex-direction: column;*/ /*수직축*/
+
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            /* 
+            
+                flex-wrap
+                - 자동 줄바꿈
+            
+            */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: nowrap; */
+
+            /* 줄바꿈이 될 때 아래로 줄이 내려가는게 아니라 위로 올라감 */
+            /* flex-wrap: wrap-reverse; */
+
+
+
+            /* 
+                flex-flow
+                - 그룹 속성, 축약 속성
+                - flex-direction + flex-wrap
+            */
+            /* flex-flow: row wrap */
+
+            /* 
+            
+                justify
+                - 메인축 방향
+
+                align
+                - 수직축 방향
+            
+            
+            */
+
+            /* 
+                justify-content
+                - 메인축 방향으로 아이템을 어떻게 정렬할지 도와주는 속성
+            */
+
+            /* justify-content: flex-start; */ /*기본값*/
+            /* justify-content: flex-end; */
+            /* flex-direction: row-reverse; */
+
+            /* justify-content: center; */
+            /* justify-content: space-between; */ /*양쪽 끝 여백이 없이 중간 사이 여백 균등하게 배분 */
+            /* justify-content: space-around; */ 
+            /* justify-content: space-evenly; */
+
+
+            /* 메인축은 변경 가능하다. >  */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+
+
+            /* 
+                align-items
+                - 수직축 방향으로 아이템을 어떻게 정렬할지?
+                - justify-content의 반대축 속성
+            
+            */
+
+
+            /* 기본값-> 가로로 늘려놓음 */
+            /* align-items: stretch; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            
+        }
+
+        #title1, #title2{
+            font-variant: small-caps;
+            color: #333;
+            border-bottom: 1px dashed #999;
+            width: 600px;
+            font-family: Arial;
+        }
+
+        #title small, #title2 small{
+            font-size: 1rem;
+        }
+
+        /* float로 했을 때 */
+        #title1 small{
+            float: right;
+            margin-top: 15px;
+        }
+
+        /* flex로 했을 때 */
+        #title2{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+
+        #parent{
+            width: 500px;
+            height: 300px;
+            background-color: yellow;
+            /* padding-top: 200px; */
+
+            /* position: relative;
+            left: 0;
+            top: 0; */
+
+            /* #child를 #parent 안에서 가운데 정렬! 특별한게 아니면 flex를 사용하자!!!!! flex는 자식한테 코딩하지 않고 부모한테만 코딩해도 정렬이 가능하다. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #child {
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            /* margin: 0 auto; */
+
+            /* position: relative;
+            left: 200px;
+            top: 200px; */
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ex58_display.html -->
+
+    <div id="box">
+        <div class="item">1.딸기</div>
+        <div class="item">2.바나나</div>
+        <div class="item">3.포도</div>
+        <div class="item">4.파인애플</div>
+        <div class="item">5.귤</div>
+    </div>
+    
+    <hr>
+
+    <h1 id="title1">Main Title <small>Sub Title</small></h1>
+    <h1 id="title2">Main Title <small>Sub Title</small></h1>
+
+    <hr>
+
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+
+</body>
+</html>
